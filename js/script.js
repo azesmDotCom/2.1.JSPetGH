@@ -51,3 +51,12 @@
 
 //Ошибки
 
+//alert('Hello');
+
+
+//const result = confirm('Life is good?');
+//console.log(result);
+
+const answer = prompt('You older 18?', '');
+console.log(typeof(answer));
+
