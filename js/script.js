@@ -581,29 +581,92 @@ P.S. Функции вызывать не обязательно*/
 
 //-----------------------2.16 callback function ------------------------------
 
-function first() {
-    //что-то делается
-    setTimeout(function() {
-        console.log(1);
-    }, 500);
-}
-function second() {
-    console.log(2);
-}
+//function first() {
+//    //что-то делается
+//    setTimeout(function() {
+//        console.log(1);
+//    }, 500);
+//}
+//function second() {
+//    console.log(2);
+//}
 
-first();
-second();
+//first();
+//second();
 
-function lernJS(lang, callback) {
-    console.log(`Я учу: ${lang}`);
-    callback();
-}
+//function lernJS(lang, callback) {
+//    console.log(`Я учу: ${lang}`);
+//    callback();
+//}
 
-function done() {
-    console.log('Я прошел этот урок!');
-}
+//function done() {
+//    console.log('Я прошел этот урок!');
+//}
 
-lernJS('JavaScript', done);
+//lernJS('JavaScript', done);
 
 
 //-----------------------2.16 callback function ------------------------------
+
+//-----------------------2.17 объекты ------------------------------
+
+//const obj = new Object();
+
+//const options = {
+//    name: 'test',
+//    width: 1024,
+//    height: 1024,
+//    colors: {
+//        border: 'black',
+//        bg: 'red'
+//    }
+//};
+
+//console.log(options.name);
+
+//delete options.name;
+
+//console.log(options);
+
+//for (let key in options) {
+//    console.log(`Свойство ${key} имеет значение ${options[key]}`);
+//}
+
+
+
+
+
+
+
+
+//-----------------------2.17 объекты ------------------------------
+
+//3.10 Function
+
+//const num = new Function(3);
+//console.log(num);
+
+function User(name, id) {
+    this.name = name;
+    this.id = id;
+    this.human = true;
+    this.hello = function() {
+        console.log(`Hello ${this.name}`);
+    };
+}
+
+User.prototype.exit = function() {
+    console.log(`Пользователь ${this.name} ушел`);
+}
+
+const  ivan = new User('Ivan', 28);
+const alex = new User('Alex', 20);
+
+ivan.exit();
+
+ivan.hello();
+alex.hello();
+
+console.log(ivan);
+console.log(alex);
+
