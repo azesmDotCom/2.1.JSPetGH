@@ -641,32 +641,103 @@ P.S. Функции вызывать не обязательно*/
 
 //-----------------------2.17 объекты ------------------------------
 
-//3.10 Function
+//___________________________________________3.10 Function
 
 //const num = new Function(3);
 //console.log(num);
 
-function User(name, id) {
-    this.name = name;
-    this.id = id;
-    this.human = true;
-    this.hello = function() {
-        console.log(`Hello ${this.name}`);
-    };
+//function User(name, id) {
+//    this.name = name;
+//    this.id = id;
+//    this.human = true;
+//    this.hello = function() {
+//        console.log(`Hello ${this.name}`);
+//    };
+//}
+
+//User.prototype.exit = function() {
+//    console.log(`Пользователь ${this.name} ушел`);
+//}
+
+//const  ivan = new User('Ivan', 28);
+//const alex = new User('Alex', 20);
+
+//ivan.exit();
+
+//ivan.hello();
+//alex.hello();
+
+//console.log(ivan);
+//console.log(alex);
+
+
+//___________________________________________3.10 FunctionEnd
+
+
+
+//___________________________________________3.11 This
+
+//1.Простой вызов функции . Обычная функция: this = window, но если use strict(строгий режим), то undefinded
+
+//function showThis(a, b) {
+//    console.log(this);
+//    function sum() {
+//        console.log(this);
+//        return a + b;
+//    }
+//    console.log(sum());
+//}
+
+//showThis(4, 5);
+
+
+
+//2.Контекст у методов объекта будет сам объект
+
+//const obj = {
+//    a: 20,
+//    b: 15,
+//    sum: function() {
+//        function shout() {
+//            console.log(this);
+//        }
+//        shout();
+//    }
+//};
+//obj.sum();
+
+//3. This  в консруктивах и классах это новый экземпляр объекта
+
+//function User(name, id) {
+//    this.name = name;
+//    this.id = id;
+//    this.human = true;
+//    this.hello = function() {
+//        console.log('Hello!' + this.name);
+//    };
+    
+//}
+
+
+//let ivan = new User('Ivan', 23);
+
+
+
+//3. This  в консруктивах и классах это новый экземпляр объекта
+
+function sayName() {
+    console.log(this);
+    console.log(this.name);
 }
 
-User.prototype.exit = function() {
-    console.log(`Пользователь ${this.name} ушел`);
-}
+const user = {
+    name: 'John'
+};
 
-const  ivan = new User('Ivan', 28);
-const alex = new User('Alex', 20);
 
-ivan.exit();
 
-ivan.hello();
-alex.hello();
 
-console.log(ivan);
-console.log(alex);
 
+
+
+//___________________________________________3.11 ThisEnd
