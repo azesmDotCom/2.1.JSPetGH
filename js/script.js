@@ -723,16 +723,58 @@ P.S. Функции вызывать не обязательно*/
 
 
 
-//3. This  в консруктивах и классах это новый экземпляр объекта
+//3. This: call, apply, ручная привязка
 
-function sayName() {
-    console.log(this);
-    console.log(this.name);
-}
+//function sayName(surname) {
+//    console.log(this);
+//    console.log(this.name + surname);
+//}
 
-const user = {
-    name: 'John'
-};
+//const user = {
+//    name: 'John'
+//};
+//sayName.call(user, ' Black');
+//sayName.apply(user, [' Black']);
+
+//function count(num) {
+//    return this*num;
+//}
+
+//const double = count.bind(2);
+//console.log(double(3));
+//console.log(double(21));
+
+
+//const btn = document.querySelector('button');
+
+//btn.addEventListener('click', function() {
+//    //console.log(this);
+//    this.style.backgroundColor = 'yellow';
+//});
+
+//const obj = {
+//    num: 5,
+//    sayNumber: function() {
+//        const say = () => {
+//            console.log(this.num);
+//        };
+
+//        say();
+//    }
+//};
+
+//obj.sayNumber();
+
+//обычная запись стрелочной функции
+
+//const double = (a) => {
+//    return a * 2;
+//};
+
+//укороченная запись стрелочной функции
+
+//const double = a =>  a * 2;
+//console.log(double(4));
 
 
 
@@ -740,4 +782,4 @@ const user = {
 
 
 
-//___________________________________________3.11 ThisEnd
+
