@@ -776,6 +776,56 @@ P.S. Функции вызывать не обязательно*/
 //const double = a =>  a * 2;
 //console.log(double(4));
 
+//3.12 Классы
+
+class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+
+    }
+
+    calaArea() {
+        return this.height * this.width;
+    }
+}
+
+class ColoredRectanglWithText extends Rectangle {
+    constructor(height, width, text, bgColor) {
+        super(height, width);
+        this.text = text;
+        this.bgColor = bgColor;
+    }
+
+    showMyProps() {
+        console.log(`Текст: ${this.text}, цвет: ${this.bgColor}`);
+    }
+}
+
+const div = new ColoredRectanglWithText(25, 10, 'Hello!', 'yellow');
+
+div.showMyProps();
+console.log(div.calaArea());
+
+
+
+//const square = new Rectangle(10, 10);
+//const long = new Rectangle(20, 100);
+
+//console.log(square.calaArea());
+//console.log(long.calaArea());
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
