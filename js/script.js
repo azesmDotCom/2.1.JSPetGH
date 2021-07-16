@@ -778,34 +778,34 @@ P.S. Функции вызывать не обязательно*/
 
 //3.12 Классы
 
-class Rectangle {
-    constructor(height, width) {
-        this.height = height;
-        this.width = width;
+//class Rectangle {
+//    constructor(height, width) {
+//        this.height = height;
+//        this.width = width;
 
-    }
+//    }
 
-    calaArea() {
-        return this.height * this.width;
-    }
-}
+//    calaArea() {
+//        return this.height * this.width;
+//    }
+//}
 
-class ColoredRectanglWithText extends Rectangle {
-    constructor(height, width, text, bgColor) {
-        super(height, width);
-        this.text = text;
-        this.bgColor = bgColor;
-    }
+//class ColoredRectanglWithText extends Rectangle {
+//    constructor(height, width, text, bgColor) {
+//        super(height, width);
+//        this.text = text;
+//        this.bgColor = bgColor;
+//    }
 
-    showMyProps() {
-        console.log(`Текст: ${this.text}, цвет: ${this.bgColor}`);
-    }
-}
+//    showMyProps() {
+//        console.log(`Текст: ${this.text}, цвет: ${this.bgColor}`);
+//    }
+//}
 
-const div = new ColoredRectanglWithText(25, 10, 'Hello!', 'yellow');
+//const div = new ColoredRectanglWithText(25, 10, 'Hello!', 'yellow');
 
-div.showMyProps();
-console.log(div.calaArea());
+//div.showMyProps();
+//console.log(div.calaArea());
 
 
 
@@ -816,13 +816,26 @@ console.log(div.calaArea());
 //console.log(long.calaArea());
 
 
+//3.14 Rest
 
+const log = function(a, b, ...rest) {
+    console.log(a, b, rest);
+}
+log('basic', 'rest', 'operator', 'usage');
 
+//function calcOrDouble(number, basis) {
+//    basis = basis || 2;
+//    console.log(number * basis);
+//}
 
+//calcOrDouble(3);
 
+function calcOrDouble(number, basis = 2) {
+    
+    console.log(number * basis);
+}
 
-
-
+calcOrDouble(3);
 
 
 
