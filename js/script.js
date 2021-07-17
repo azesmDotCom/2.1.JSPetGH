@@ -818,10 +818,10 @@ P.S. Функции вызывать не обязательно*/
 
 //3.14 Rest
 
-const log = function(a, b, ...rest) {
-    console.log(a, b, rest);
-}
-log('basic', 'rest', 'operator', 'usage');
+//const log = function(a, b, ...rest) {
+//    console.log(a, b, rest);
+//}
+//log('basic', 'rest', 'operator', 'usage');
 
 //function calcOrDouble(number, basis) {
 //    basis = basis || 2;
@@ -830,12 +830,44 @@ log('basic', 'rest', 'operator', 'usage');
 
 //calcOrDouble(3);
 
-function calcOrDouble(number, basis = 2) {
+//function calcOrDouble(number, basis = 2) {
     
-    console.log(number * basis);
-}
+//    console.log(number * basis);
+//}
 
-calcOrDouble(3);
+//calcOrDouble(3);
+
+
+//___________________________________________________4.2 JSON
+
+
+const persone = {
+    name: 'Alex',
+    tel: '+7 805 55 5555 555',
+    parents: {
+        mom: 'Jane',
+        dad: 'Bob'
+    }
+};
+
+const clone = JSON.parse(JSON.stringify(persone));
+clone.parents.mom = "Ann";
+console.log(persone);
+console.log(clone);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
